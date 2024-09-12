@@ -1,0 +1,49 @@
+Human prompt: "Please role play communications of these four actors and the sim for a takeoff sequence from dead stop at the end of the runway just before takeoff to airborne and on course to the first search
+area."
+
+Step1: radio --> {"speaker": "ground station operator", "listener": "pilot", "content": "SAR001, this is Ground Station. You are cleared for takeoff. Winds are calm. Proceed when ready."}
+----
+Step2: radio --> {"speaker": "pilot", "listener": "ground station operator", "content": "Ground Station, this is SAR001. Roger, cleared for takeoff. Starting takeoff sequence now."}
+----
+Step3: operate_systems --> {"operator": "pilot", "action": "operate", "system": "engine", "value": "start"}
+----
+Step4: operate_systems --> {"operator": "pilot", "action": "operate", "system": "flaps", "value": "takeoff"}
+----
+Step5: operate_systems --> {"operator": "pilot", "action": "operate", "system": "takeoff roll", "value": "initiate"}
+----
+Step6: operate_systems --> {"operator": "pilot", "action": "operate", "system": "rotation", "value": "initiate"}
+----
+Step7: operate_systems --> {"operator": "copilot", "action": "operate", "system": "altitude", "value": "monitor"}
+----
+Step8: radio --> {"speaker": "copilot", "listener": "ground station operator", "content": "Ground Station, this is SAR001. We are airborne and en route to the first search area. Will report any deviations."}
+----
+Step9: operate_systems --> {"operator": "ground station operator", "action": "log", "system": "SAR mission details", "value": "SAR001 airborne and en route to the first search area"}
+----
+Step10: radio --> {"speaker": "ground station operator", "listener": "pilot", "content": "SAR001, this is Ground Station. Roger, we have you airborne and en route. Maintain communication and proceed as planned. Good luck."}
+----
+Step11: radio --> {"speaker": "pilot", "listener": "ground station operator", "content": "Ground Station, SAR001. Roger, maintaining communication. Thank you."}
+----
+Step12: operate_systems --> {"operator": "search operator", "action": "query", "system": "search radar", "value": "n/a"}
+----
+Step13: operate_systems --> {"operator": "search operator", "action": "report", "system": "search radar", "value": "active and ready"}
+----
+Step14: operate_systems --> {"operator": "search operator", "action": "report", "system": "camera", "value": "active and ready"}
+----
+Step15: radio --> {"speaker": "search operator", "listener": "pilot", "content": "Radar and camera systems are active and ready for search operations."}
+----
+Step16: radio --> {"speaker": "pilot", "listener": "ground station operator", "content": "Ground Station, SAR001. All systems are active and ready for search operations. We are proceeding to the first search area."}
+----
+Step17: operate_systems --> {"operator": "ground station operator", "action": "log", "system": "SAR mission details", "value": "SAR001 systems active and proceeding to first search area"}
+----
+Step18: radio --> {"speaker": "ground station operator", "listener": "pilot", "content": "SAR001, Ground Station. Roger, proceed as planned. Maintain communication and update on any findings."}
+----
+Step19: radio --> {"speaker": "pilot", "listener": "ground station operator", "content": "Ground Station, SAR001. Roger, will maintain communication and update on any findings."}
+----
+Step20: operate_systems --> {"operator": "search operator", "action": "operate", "system": "navigation", "value": "monitor"}
+----
+Step21: operate_systems --> {"operator": "copilot", "action": "operate", "system": "communication", "value": "monitor"}
+----
+Step22: operate_systems --> {"operator": "copilot", "action": "operate", "system": "navigation", "value": "backup"}
+----
+
+
